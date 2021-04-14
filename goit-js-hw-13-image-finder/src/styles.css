@@ -12,9 +12,123 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-
-  /*
-   * CSS image reference example.
-   */
-  background-image: url('./images/bg-pattern.png');
+    background:#23074d;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #cc5433cc, #23074dc9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #cc5433c4, #23074dd2);
+    
 }
+
+ul{
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.photo-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+
+.is-hidden {
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.photo-card {
+  margin: 10px;
+  width: calc((100% - 80px) / 3);
+  border-radius:5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  transition: 400ms;
+
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.photo-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stats-item {
+  display: flex;
+  text-align: center;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.material-icons {
+  display: flex;
+  justify-content: center;
+}
+i.material-icons {
+  color: rgb(24, 187, 187);
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  border-color: transparent;
+  outline: none;
+  cursor: pointer;
+  width: 300px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+
+}
+
+.search-form__btn{
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all .2s ease-in-out; 
+  outline: none;
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+.search-form__btn:hover { 
+  transform: scale(1.3); 
+  background-color: rgb(24, 187, 187);
+  border-radius: 5px;
+}
+
+section{
+  text-align: center;
+}
+
+.stats{
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}
+
