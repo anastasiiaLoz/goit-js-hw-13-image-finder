@@ -64,3 +64,4 @@ function appendPicturesMarkup(images){
 function clearPicturesContainer(){
     refs.gallery.innerHTML = '';
 }
+
